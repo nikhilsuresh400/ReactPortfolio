@@ -9,6 +9,7 @@ import { Link } from "react-router-dom"
 import LatestWorks from "../LatestWorks/LatestWorks"
 import Experience from "../Experience/Experience"
 import Education from "../Education/Education"
+import { BsGithub, BsInstagram, BsLinkedin, BsMailbox, BsMailbox2 } from "react-icons/bs"
 
 const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) => {
 
@@ -120,10 +121,10 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                         whileInView={{ opacity: 1, translateX: 0 }}
                         transition={{ duration: 0.5, type: "ease-in-out" }}
                         className="flex flex-col gap-8 ml-auto mr-8 mt-30">
-                        <a href="#"><li className="transition-all duration-[120ms] ease-in-out hover:text-[#0077b5]"><Linkedin /></li></a>
-                        <a href="#"><li className="transition-all duration-[120ms] ease-in-out hover:text-[#ee2a7b]"><Instagram /></li></a>
-                        <a href="#"><li className="transition-all duration-[120ms] ease-in-out hover:text-[#6cc644]"><Github /></li></a>
-                        <a href="#"><li className="transition-all duration-[120ms] ease-in-out hover:text-orangeColor"><Mail /></li></a>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#0077b5]"><a href="https://www.linkedin.com/in/nikhil-suresh-06207a360/" target="_blank" noopener noreferrer><BsLinkedin className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#6cc644]"><a href="https://github.com/nikhilsuresh400" target="_blank" noopener noreferrer><BsGithub className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#ee2a7b]"><a href="https://www.instagram.com/22.4.24k/" target="_blank" noopener noreferrer><BsInstagram className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-orangeColor"><a href="" target="_blank" noopener noreferrer><BsMailbox2 className="text-2xl" /></a></li>
                     </motion.ul>
                 </div>
                 {/* LATEST WORKS BUTTON */}

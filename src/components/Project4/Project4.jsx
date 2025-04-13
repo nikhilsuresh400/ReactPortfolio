@@ -8,9 +8,9 @@ const Project4 = () => {
         <ProjectPage
             title="Drum Machine"
             description="Click, play, groove!"
-            role="DEVELOPER"
-            context="MUSIC APP"
-            period="EARLY. 2022"
+            role="developer"
+            context="music app"
+            period="early. 2022"
             projectText="A self-sufficient music player webApp where you can click and play drums. Added all the essential drum kit including Kick, Snare, 3 different Toms and a cymbal."
             brandingHeading="Badham-toosh"
             brandingDesc={

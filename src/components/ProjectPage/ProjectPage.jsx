@@ -37,13 +37,13 @@ const ProjectPage = ({
                     <p className="italic font-semibold drop-shadow-xl">{description}</p>
                 </div>
                 <div className="h-1/2 flex items-end gap-88 tracking-wider text-sm">
-                    <motion.h1 initial={{opacity: 0, translateY: 100}} whileInView={{opacity:1, translateY: 0}} transition={{duration: 0.6, type: easeInOut}}>
+                    <motion.h1 className="uppercase" initial={{opacity: 0, translateY: 100}} whileInView={{opacity:1, translateY: 0}} transition={{duration: 0.6, type: easeInOut}}>
                         <span className="text-orangeColor">ROLE</span> {role}
                     </motion.h1>
-                    <motion.h1 initial={{opacity: 0, translateY: 100}} whileInView={{opacity:1, translateY: 0}} transition={{duration: 0.6, type: easeInOut}}>
+                    <motion.h1 className="uppercase" initial={{opacity: 0, translateY: 100}} whileInView={{opacity:1, translateY: 0}} transition={{duration: 0.6, type: easeInOut}}>
                         <span className="text-orangeColor">CONTEXT</span> {context}
                     </motion.h1>
-                    <motion.h1 initial={{opacity: 0, translateY: 100}} whileInView={{opacity:1, translateY: 0}} transition={{duration: 0.6, type: easeInOut}}>
+                    <motion.h1 className="uppercase" initial={{opacity: 0, translateY: 100}} whileInView={{opacity:1, translateY: 0}} transition={{duration: 0.6, type: easeInOut}}>
                         <span className="text-orangeColor">PERIOD</span> {period}
                     </motion.h1>
                 </div>

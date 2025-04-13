@@ -39,7 +39,7 @@ function AboutmeModal({ onClose }) {
                                     <span className="text-blueColor"> jQuery</span> and
                                     <span className="text-blueColor"> Tailwind/CSS animations</span>.
                                     I'm always learning and I'd love to build more projects and connect with like-minded people across the world through technology.</p>
-                                <p className="mt-4">I love to cook, I listen to indie music in my free time,
+                                <p className="mt-4">I love photography, I listen to indie music in my free time,
                                     and i'm always advocating for happy hours by trying my best to stay positive in life.</p>
                             </div>
                             {/* STACK SHOWCASE */}

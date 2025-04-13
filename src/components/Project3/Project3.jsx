@@ -9,9 +9,9 @@ const Project3 = () => {
         <ProjectPage
             title="Music Player"
             description="Music playing webapp with play/pause feature."
-            role="DEVELOPER"
-            context="MUSIC APP"
-            period="MID. 2024"
+            role="developer"
+            context="music app"
+            period="mid. 2024"
             projectText="A self-sufficient music player webApp where you can spend your time listening to your favorite artists and take a well needed break."
             brandingHeading="The power of music."
             brandingDesc={
