@@ -1,4 +1,4 @@
-import { X, MoveRight } from "lucide-react"
+import { X } from "lucide-react"
 import TechList from "./TechList"
 import ModalPhoto from "./aboutMe_illustration.png"
 import { FaNodeJs, FaReact } from "react-icons/fa"
@@ -6,7 +6,7 @@ import { IoLogoJavascript } from "react-icons/io"
 import { RiTailwindCssFill } from "react-icons/ri"
 import styles from "./AboutmeModal.module.css"
 import { useRef } from "react"
-import { easeInOut, motion, AnimatePresence } from "framer-motion"
+import { Link } from "react-router-dom"
 
 function AboutmeModal({ onClose }) {
 
@@ -39,20 +39,21 @@ function AboutmeModal({ onClose }) {
                                     <span className="text-blueColor"> jQuery</span> and
                                     <span className="text-blueColor"> Tailwind/CSS animations</span>.
                                     I'm always learning and I'd love to build more projects and connect with like-minded people across the world through technology.</p>
-                                <p className="mt-4">I love photography, I listen to indie music in my free time,
+                                <p className="mt-4">I like cooking, I listen to indie music in my free time,
                                     and i'm always advocating for happy hours by trying my best to stay positive in life.</p>
+                                <p className="mt-4">I also like photography, check them <Link to="./gallery" className="text-orangeColor" >here</Link>.</p>
                             </div>
                             {/* STACK SHOWCASE */}
                             <div className="mt-7">
                                 <div className="mb-4">
-                                    <p className="text-grayColor mb-4">Technologies</p>
+                                    <p className="text-grayColor mb-2">Technologies</p>
                                     <TechList name="HTML5" />
                                     <TechList name="CSS3" />
                                     <TechList name="Javascript" />
                                     <TechList name="NodeJS" />
                                 </div>
                                 <div className="mb-4">
-                                    <p className="text-grayColor mb-4">Libraries/Frameworks</p>
+                                    <p className="text-grayColor mb-2">Libraries/Frameworks</p>
                                     <TechList name="ReactJS" />
                                     <TechList name="jQuery" />
                                     <TechList name="TailwindCSS" />
@@ -60,7 +61,7 @@ function AboutmeModal({ onClose }) {
                                     <TechList name="BootstrapCSS" />
                                 </div>
                                 <div className="mb-4">
-                                    <p className="text-grayColor mb-4">Tools</p>
+                                    <p className="text-grayColor mb-2">Tools</p>
                                     <TechList name="Git/Github" />
                                     <TechList name="Figma" />
                                     <TechList name="Canva" />
@@ -69,7 +70,7 @@ function AboutmeModal({ onClose }) {
                                 </div>
                             </div>
                             {/* TECH-TOOLTIPS */}
-                            <div className="mt-12 flex items-center gap-12 h-32 w-[100%]">
+                            <div className="mt-8 flex items-center gap-12 h-32 w-[100%]">
                                 <div className={styles.iconContainer}>
                                     <IoLogoJavascript className={styles.stackIcon} />
                                     <span className={styles.tooltip}>Javascript</span>

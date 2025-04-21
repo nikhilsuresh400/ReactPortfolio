@@ -28,7 +28,7 @@ const ContactmeModal = ({ onCloseContact }) => {
                                 <h1 className="text-4xl font-semibold text-left">Contact Me</h1>
                             </div>
                             <div>
-                                <a href="#" className="text-sm flex items-center gap-1 hover:text-blueColor"><Phone size={16} />(+91)8319958744</a>
+                                <a href="tel:8319958744" className="text-sm flex items-center gap-1 hover:text-blueColor"><Phone size={16} />(+91)8319958744</a>
                             </div>
                         </div>
                         {/* FORM SECTION */}

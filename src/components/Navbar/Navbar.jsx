@@ -10,6 +10,8 @@ import LatestWorks from "../LatestWorks/LatestWorks"
 import Experience from "../Experience/Experience"
 import Education from "../Education/Education"
 import { BsGithub, BsInstagram, BsLinkedin, BsMailbox, BsMailbox2 } from "react-icons/bs"
+import { FiDownload, FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi"
+import Resume from "../Resume/Resume"
 
 const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) => {
 
@@ -51,9 +53,9 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                     className="px-[8rem] py-[1rem] flex items-center justify-between">
 
                     {/* LOGO */}
-                    <div>
-                        <h1 className="text-4xl font-semibold font-cursiveFont">Ni <span className="text-orangeColor">.</span></h1>
-                    </div>
+                    <Link to="/">
+                        <h1 className="text-4xl font-semibold font-cursiveFont hover:opacity-80 transition">Ni <span className="text-orangeColor">.</span></h1>
+                    </Link>
 
                     {/* NAVLINKS */}
                     <div className="flex items-center gap-8">
@@ -65,8 +67,8 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                             </ul>
                         </div>
                         {showContactModal && <ContactmeModal onCloseContact={() => setShowContactModal(false)} />}
-                        <div className="cursor-pointer hover:text-orangeColor transition-all duration-[120ms] ease-in-out"><Mail size={22} /></div>
-                        <div className="cursor-pointer hover:text-[#25D366] transition-all duration-[120ms] ease-in-out"><Phone size={22} /></div>
+                        <div className="cursor-pointer hover:text-orangeColor transition-all duration-[120ms] ease-in-out"><a href="mailto:nikaynm400@gmail.com"><Mail size={22} /></a></div>
+                        <div className="cursor-pointer hover:text-[#25D366] transition-all duration-[120ms] ease-in-out"><a href="https://wa.me/8319958744?text=Hi%20Nikhil%2C%20I%20saw%20your%20portfolio!" target="_blank" noopener noreferrer><Phone size={22} /></a></div>
                     </div>
                 </motion.nav>
                 {/* MAIN SECTION */}
@@ -96,24 +98,32 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                             initial={{ opacity: 0, translateX: "-4%" }}
                             whileInView={{ opacity: 1, translateX: 0 }}
                             transition={{ duration: 0.8, type: easeInOut }}
-                            className="text-2xl text-grayColor">I create things on the web to make the world a smaller place!</motion.p>
+                            className="text-2xl text-grayColor italic">I create things on the web to make the world a smaller place!</motion.p>
 
-                        {/* ABOUT ME BUTTON */}
-                        <button
-                            onClick={() => setShowModal(true)}
-                            className="relative bg-darkColor 
-                                        text-bodyColor px-6 py-2 mt-6 
-                                        transition-all duration-[120ms] ease-in-out 
-                                        rounded 
-                                        shadow-buttonShadow flex items-center hover:scale-[1.04] group">
-                            About me <MoveRight size={32}
-                                className="text-orangeColor 
-                                            absolute top-1/2 -translate-y-1/2 -right-4 
-                                            group-hover:-right-9 
-                                            transition-all duration-[120ms] ease-in-out" /></button>
+                        <div className="flex items-center gap-4">
+                            {/* ABOUT ME BUTTON */}
+                            <button
+                                onClick={() => setShowModal(true)}
+                                className="bg-darkColor 
+                                            text-bodyColor px-6 py-2 mt-6 
+                                            transition-all duration-[120ms] ease-in-out 
+                                            rounded 
+                                            shadow-buttonShadow flex items-center hover:scale-[1.04]">
+                                About me </button>
 
-                        {/* ABOUT ME MODAL */}
-                        {showModal && <AboutmeModal onClose={() => setShowModal(false)} />}
+                            {/* ABOUT ME MODAL */}
+                            {showModal && <AboutmeModal onClose={() => setShowModal(false)} />}
+
+                            {/* VIEW RESUME BUTTON */}
+                            <Link to="/resume">
+                                <button className="bg-darkColor 
+                                                    text-bodyColor px-8 py-2 mt-6 text-center
+                                                    transition-all duration-[120ms] ease-in-out 
+                                                    rounded
+                                                    shadow-buttonShadow hover:scale-[1.04]">
+                                    Resume </button>
+                            </Link>
+                        </div>
                     </div>
                     {/* SIDE BUTTONS */}
                     <motion.ul
@@ -121,10 +131,10 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                         whileInView={{ opacity: 1, translateX: 0 }}
                         transition={{ duration: 0.5, type: "ease-in-out" }}
                         className="flex flex-col gap-8 ml-auto mr-8 mt-30">
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#0077b5]"><a href="https://www.linkedin.com/in/nikhil-suresh-06207a360/" target="_blank" noopener noreferrer><BsLinkedin className="text-2xl" /></a></li>
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#6cc644]"><a href="https://github.com/nikhilsuresh400" target="_blank" noopener noreferrer><BsGithub className="text-2xl" /></a></li>
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#ee2a7b]"><a href="https://www.instagram.com/22.4.24k/" target="_blank" noopener noreferrer><BsInstagram className="text-2xl" /></a></li>
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-orangeColor"><a href="" target="_blank" noopener noreferrer><BsMailbox2 className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#0077b5]"><a href="https://www.linkedin.com/in/nikhil-suresh-06207a360/" target="_blank" noopener noreferrer><FiLinkedin className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#6cc644]"><a href="https://github.com/nikhilsuresh400" target="_blank" noopener noreferrer><FiGithub className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#ee2a7b]"><a href="https://www.instagram.com/22.4.24k/" target="_blank" noopener noreferrer><FiInstagram className="text-2xl" /></a></li>
+                        <li className="transition-all duration-[120ms] ease-in-out hover:text-orangeColor"><a href="mailto:nikaynm400@gmail.com"><FiMail className="text-2xl" /></a></li>
                     </motion.ul>
                 </div>
                 {/* LATEST WORKS BUTTON */}

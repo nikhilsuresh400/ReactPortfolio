@@ -91,7 +91,7 @@ const ProjectPage = ({
                         </p>
                     </div>
                     <div>
-                        <motion.img src={brandingImage} alt="Branding" className="aspect-video rounded shadow-buttonShadow"
+                        <motion.img src={brandingImage} alt="Branding" loading="lazy" className="aspect-video rounded shadow-buttonShadow"
                             initial={{opacity: 0, translateX: 100}}
                             whileInView={{opacity: 1, translateX: 0}}
                             transition={{duration: 0.5, ease: easeInOut}} />

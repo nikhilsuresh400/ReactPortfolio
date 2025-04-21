@@ -12,9 +12,9 @@ const ProjectNavbar = () => {
                 whileInView={{ translateY: 0 }}
                 className="px-[8rem] py-[1rem] flex items-center justify-between">
                 {/* LOGO */}
-                <div>
-                    <h1 className="text-4xl font-semibold font-cursiveFont">Ni <span className="text-orangeColor">.</span></h1>
-                </div>
+                <Link to="/">
+                    <h1 className="text-4xl font-semibold font-cursiveFont hover:opacity-80 transition">Ni <span className="text-orangeColor">.</span></h1>
+                </Link>
                 {/* NAVLINKS */}
                 <div className="flex items-center gap-8">
                     <div>

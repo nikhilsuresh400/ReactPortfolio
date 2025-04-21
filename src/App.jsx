@@ -6,7 +6,8 @@ import Project1 from './components/Project1/Project1'
 import Project2 from './components/Project2/Project2'
 import Project3 from './components/Project3/Project3'
 import Project4 from './components/Project4/Project4'
-import ContactmeModal from './components/Navbar/ContactmeModal'
+import Gallery from './components/Gallery/Gallery'
+import Resume from './components/Resume/Resume'
 
 const appRouter = createBrowserRouter([
   {
@@ -34,8 +35,12 @@ const appRouter = createBrowserRouter([
     element: <Project4 />
   },
   {
-    path: "/contactmodal",
-    element: <ContactmeModal />
+    path: "/resume",
+    element: <Resume />
+  },
+  {
+    path: "/gallery",
+    element: <Gallery />
   },
 ])
 
