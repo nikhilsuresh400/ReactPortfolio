@@ -6,7 +6,7 @@ import ProjectPage from "../ProjectPage/ProjectPage"
 const Project4 = () => {
     return (
         <ProjectPage
-            title="Drum Machine"
+            title="Sundown"
             description="Sundown Studio clone containing elements using vanillaJS, swiperJS and gsap."
             role="frontend developer"
             context="website clone"

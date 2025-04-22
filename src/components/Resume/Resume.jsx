@@ -7,12 +7,15 @@ import { Link } from "react-router-dom";
 const Resume = () => {
 
     // NUMBER LINE ARRAY
-    const lines = Array.from({ length: 44 }, (_, i) => i + 1);
+    const lines = Array.from({ length: 46 }, (_, i) => i + 1);
 
     return (
         <div className="relative flex items-center justify-center">
             <Link to="/">
-                <IoMdArrowBack className="absolute top-3 left-3 text-3xl"/>
+                <IoMdArrowBack 
+                    className="absolute top-3 left-3 text-3xl hover:bg-gray-100 rounded-full
+                                transition-all duration-[160ms] ease-in-out"
+                />
             </Link>
             {/* BACKGROUND GRAPHIC */}
             <div className="absolute -z-1">
@@ -83,7 +86,7 @@ const Resume = () => {
                                 </div>
                                 <div>
                                     <div>
-                                        <p className="font-bold">12th (2016)
+                                        <p className="font-bold">12th (2016) <br />
                                             6.14
                                         </p>
                                         <p>Adarsh Vidyalaya Higher Secondary School (CBSE), Raipur, <br />Chhattisgarh - 492001</p>
@@ -92,7 +95,7 @@ const Resume = () => {
                             </div>
                             {/* Certification area */}
                             <div>
-                                <p className="text-3xl font-bold mb-2"><span className="text-orangeColor">.</span>certification</p>
+                                <p className="text-3xl font-bold mb-2"><span className="text-orangeColor">.</span>certifications</p>
                                 <div className="grid grid-cols-3 gap-8">
                                     <div>
                                         <p>Complete 2023 <span className="text-blueColor">Web Development</span> Bootcamp by Dr. Angela Yu</p>

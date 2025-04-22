@@ -1,17 +1,12 @@
-import { Mail, Phone, Github, Instagram, Linkedin, MoveRight, MoveDown } from "lucide-react"
+import { Mail, Phone, MoveDown } from "lucide-react"
 import "./Navbar.css"
 import AboutmeModal from "./AboutmeModal"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import ContactmeModal from "./ContactmeModal"
 import { motion } from "motion/react";
 import { easeInOut } from "motion"
 import { Link } from "react-router-dom"
-import LatestWorks from "../LatestWorks/LatestWorks"
-import Experience from "../Experience/Experience"
-import Education from "../Education/Education"
-import { BsGithub, BsInstagram, BsLinkedin, BsMailbox, BsMailbox2 } from "react-icons/bs"
-import { FiDownload, FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi"
-import Resume from "../Resume/Resume"
+import { FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi"
 
 const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) => {
 
@@ -73,7 +68,7 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                 </motion.nav>
                 {/* MAIN SECTION */}
                 <div className="flex -mt-30">
-                    <div className="w-full max-w-screen-2xl mx-auto">
+                    <div className="w-full max-w-screen-2xl px-[8rem]">
                         <motion.p initial={{ opacity: 0, translateY: "-100%" }}
                             whileInView={{ opacity: 1, translateY: 0 }}
                             transition={{ duration: 1, type: easeInOut }}
@@ -99,7 +94,7 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                             whileInView={{ opacity: 1, translateX: 0 }}
                             transition={{ duration: 0.8, type: easeInOut }}
                             className="text-2xl text-grayColor italic">I create things on the web to make the world a smaller place!</motion.p>
-
+                            
                         <div className="flex items-center gap-4">
                             {/* ABOUT ME BUTTON */}
                             <button
@@ -124,18 +119,30 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
                                     Resume </button>
                             </Link>
                         </div>
+                        {/* SOCIAL LINKS */}
+                        <ul className="flex gap-12 mt-10">
+                            <motion.li
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.2, delay: 0.6, ease: easeInOut }}
+                                className="transition-all duration-[120ms] ease-in-out hover:text-[#0077b5]"><a href="https://www.linkedin.com/in/nikhil-suresh-06207a360/" target="_blank" noopener noreferrer><FiLinkedin className="text-[1.6rem]" /></a></motion.li>
+                            <motion.li
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.2, delay: 0.8, ease: easeInOut }}
+                                className="transition-all duration-[120ms] ease-in-out hover:text-[#6cc644]"><a href="https://github.com/nikhilsuresh400" target="_blank" noopener noreferrer><FiGithub className="text-[1.6rem]" /></a></motion.li>
+                            <motion.li
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.2, delay: 1, ease: easeInOut }}
+                                className="transition-all duration-[120ms] ease-in-out hover:text-[#ee2a7b]"><a href="https://www.instagram.com/22.4.24k/" target="_blank" noopener noreferrer><FiInstagram className="text-[1.6rem]" /></a></motion.li>
+                            <motion.li
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.2, delay: 1.2, ease: easeInOut }}
+                                className="transition-all duration-[120ms] ease-in-out hover:text-orangeColor"><a href="mailto:nikaynm400@gmail.com"><FiMail className="text-[1.6rem]" /></a></motion.li>
+                        </ul>
                     </div>
-                    {/* SIDE BUTTONS */}
-                    <motion.ul
-                        initial={{ opacity: 0, translateX: "100%" }}
-                        whileInView={{ opacity: 1, translateX: 0 }}
-                        transition={{ duration: 0.5, type: "ease-in-out" }}
-                        className="flex flex-col gap-8 ml-auto mr-8 mt-30">
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#0077b5]"><a href="https://www.linkedin.com/in/nikhil-suresh-06207a360/" target="_blank" noopener noreferrer><FiLinkedin className="text-2xl" /></a></li>
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#6cc644]"><a href="https://github.com/nikhilsuresh400" target="_blank" noopener noreferrer><FiGithub className="text-2xl" /></a></li>
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-[#ee2a7b]"><a href="https://www.instagram.com/22.4.24k/" target="_blank" noopener noreferrer><FiInstagram className="text-2xl" /></a></li>
-                        <li className="transition-all duration-[120ms] ease-in-out hover:text-orangeColor"><a href="mailto:nikaynm400@gmail.com"><FiMail className="text-2xl" /></a></li>
-                    </motion.ul>
                 </div>
                 {/* LATEST WORKS BUTTON */}
                 <button onClick={scrollToLatestWorks}
