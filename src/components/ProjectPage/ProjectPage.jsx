@@ -15,11 +15,11 @@ const ProjectPage = ({
     brandingHeading,
     brandingDesc,
     brandingImage, 
-    backgroundImage, 
+    backgroundImage,
     nextWorkTitle, 
     nextWorkLink, 
     colors, 
-    fontName
+    fontName,
 }) => {
     return (
         <div>

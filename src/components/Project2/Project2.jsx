@@ -8,7 +8,7 @@ const Project4 = () => {
     return (
         <ProjectPage
             title="Weather WebApp"
-            description="Asimple weather webapp made using vanillaJS and Open Weather Map API. Just enter any city name!"
+            description="A simple weather webapp made using vanillaJS and Open Weather Map API. Just enter any city name!"
             role="developer"
             context="weather app"
             period="late. 2023"

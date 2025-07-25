@@ -20,31 +20,33 @@ function AboutmeModal({ onClose }) {
 
     return (
         <>
-            <div ref={modalRef} onClick={closeModal} className="fixed inset-0 bg-black/8 backdrop-blur-md flex items-center justify-center z-99">
-                {/* CLOSE BUTTON */}
-                <div className="flex flex-col py-4 px-4 my-16 bg-bodyColor h-9/10 w-3/4 rounded-xl shadow-lg">
-                    <button onClick={onClose} className="place-self-end rounded-full p-1 hover:bg-gray-100"><X /></button>
-                    {/* MODAL CONTENT */}
-                    <div className="grid grid-cols-2 px-16">
-                        {/* GRID LEFT */}
+            <div ref={modalRef} onClick={closeModal} className="fixed inset-0 bg-black/8 backdrop-blur-md flex items-center justify-center z-50 p-2">
+                {/* Modal Container */}
+                <div className="flex flex-col py-4 px-4 sm:my-16 bg-bodyColor h-auto sm:h-[90%] w-3/4 rounded-xl shadow-lg overflow-y-auto">
+                    <button onClick={onClose} className="place-self-end rounded-full p-1 hover:bg-gray-100">
+                        <X />
+                    </button>
+
+                    {/* Grid Layout: Switch to 1 column on small screens */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 sm:px-16 gap-6">
+                        {/* LEFT SIDE */}
                         <div>
-                            <div>
-                                <h1 className="text-4xl font-semibold text-left">ABOUT ME</h1>
-                            </div>
-                            <div className="mt-4">
-                                <p className="mt-6">Based in Kerala(IN), B.E. Computer Science graduate.</p>
-                                <p className="mt-4">I have worked on various frontend projects for 2 years.
-                                    I love
+                            <h1 className="text-2xl lg:text-3xl font-semibold text-center lg:text-left">ABOUT ME</h1>
+                            <div className="mt-4 text-sm sm:text-base">
+                                <p className="mt-4">Based in Kerala(IN), B.E. Computer Science graduate.</p>
+                                <p className="mt-4">I have worked on various frontend projects for 2 years. I love
                                     <span className="text-blueColor"> ReactJS</span>,
                                     <span className="text-blueColor"> jQuery</span> and
-                                    <span className="text-blueColor"> Tailwind/CSS animations</span>.
-                                    I'm always learning and I'd love to build more projects and connect with like-minded people across the world through technology.</p>
+                                    <span className="text-blueColor"> Tailwind/CSS animations</span>. I'm always learning and would love to build more projects and connect with like-minded people across the world through technology.
+                                </p>
                                 <p className="mt-4">I like cooking, I listen to indie music in my free time,
-                                    and i'm always advocating for happy hours by trying my best to stay positive in life.</p>
-                                <p className="mt-4">I also like photography, check them <Link to="./gallery" className="text-orangeColor" >here</Link>.</p>
+                                    and I'm always advocating for happy hours by trying my best to stay positive in life.
+                                </p>
+                                <p className="mt-4">I also like photography, check them <Link to="./gallery" className="text-orangeColor">here</Link>.</p>
                             </div>
-                            {/* STACK SHOWCASE */}
-                            <div className="mt-7">
+
+                            {/* TECH STACK */}
+                            <div className="mt-6">
                                 <div className="mb-4">
                                     <p className="text-grayColor mb-2">Technologies</p>
                                     <TechList name="HTML5" />
@@ -69,8 +71,9 @@ function AboutmeModal({ onClose }) {
                                     <TechList name="Illustrator" />
                                 </div>
                             </div>
-                            {/* TECH-TOOLTIPS */}
-                            <div className="mt-8 flex items-center gap-12 h-32 w-[100%]">
+
+                            {/* TECH ICONS */}
+                            <div className="mt-6 flex flex-wrap items-center gap-6">
                                 <div className={styles.iconContainer}>
                                     <IoLogoJavascript className={styles.stackIcon} />
                                     <span className={styles.tooltip}>Javascript</span>
@@ -89,16 +92,16 @@ function AboutmeModal({ onClose }) {
                                 </div>
                             </div>
                         </div>
-                        {/* GRID RIGHT */}
-                        <div>
+
+                        {/* RIGHT SIDE */}
+                        <div className="flex justify-center items-center">
                             <img src={ModalPhoto} alt="Modal Illustration"
-                                className="hover:scale-[1.05] transition-all duration-[200ms] ease-in-out" />
-                            <div>
-                            </div>
+                                className="max-w-[100%] sm:max-w-[80%] hover:scale-[1.05] transition-all duration-[200ms] ease-in-out" />
                         </div>
                     </div>
                 </div>
             </div>
+
         </>
 
     )

@@ -17,9 +17,9 @@ const LatestWorks = () => {
                             transition={{duration: 0.5, type: easeInOut}}>Latest Works<span className="text-orangeColor">.</span></motion.h1>
             </div>
             {/* PROJECTS */}
-            <div className="px-16">
+            <div className="px-2 lg:px-16">
                 {/* PROJECT 1 */}
-                <motion.div className="group mb-56 aspect-video w-1/2 place-self-center shadow-projectShadow
+                <motion.div className="group mb-32 lg:mb-56 aspect-video w-[88vw] lg:w-1/2 place-self-center shadow-projectShadow
                                 bg-[url(/src/components/LatestWorks/project1.jpg)] bg-center bg-no-repeat bg-cover
                                 flex flex-col justify-between text-containerColor relative"
                                 initial={{opacity: 0, translateX: -100}}
@@ -29,7 +29,7 @@ const LatestWorks = () => {
                         projectDesc="Landing page for Sundown studio containing elements using vanilla js, swiperJS and gsap." />
                 </motion.div>
                 {/* PROJECT 2 */}
-                <motion.div className="group mb-56 aspect-video w-1/2 place-self-center shadow-projectShadow
+                <motion.div className="group mb-32 lg:mb-56 aspect-video w-[88vw] lg:w-1/2 place-self-center shadow-projectShadow
                                 bg-[url(/src/components/LatestWorks/project2.jpg)] bg-center bg-no-repeat bg-cover
                                 flex flex-col justify-between text-containerColor relative"
                                 initial={{opacity: 0, translateX: 100}}
@@ -39,7 +39,7 @@ const LatestWorks = () => {
                         projectDesc="A simple weather app made using vanilla js and Open Weather Map API. Just enter any city name!" />
                 </motion.div>
                 {/* PROJECT 3 */}
-                <motion.div className="group mb-56 aspect-video w-1/2 place-self-center shadow-projectShadow
+                <motion.div className="group mb-32 lg:mb-56 aspect-video w-[88vw] lg:w-1/2 place-self-center shadow-projectShadow
                                 bg-[url(/src/components/LatestWorks/project3.jpg)] bg-center bg-no-repeat bg-cover
                                 flex flex-col justify-between text-containerColor relative"
                                 initial={{opacity: 0, translateX: -100}}
@@ -49,7 +49,7 @@ const LatestWorks = () => {
                         projectDesc="A simple music player with Play/Pause feature." />
                 </motion.div>
                 {/* PROJECT 4 */}
-                <motion.div className="group mb-56 aspect-video w-1/2 place-self-center shadow-projectShadow
+                <motion.div className="group mb-32 lg:mb-56 aspect-video w-[88vw] lg:w-1/2 place-self-center shadow-projectShadow
                                 bg-[url(/src/components/LatestWorks/project4.jpg)] bg-center bg-no-repeat bg-cover
                                 flex flex-col justify-between text-containerColor relative"
                                 initial={{opacity: 0, translateX: 100}}

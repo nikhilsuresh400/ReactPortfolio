@@ -4,7 +4,7 @@ import { motion, easeInOut } from "framer-motion"
 const Experience = () => {
     return (
         <div className="pt-10">
-            <div className="flex flex-col items-center justify-center mb-24">
+            <div className="flex flex-col items-center justify-between mb-24">
                 <motion.p className="text-grayColor mb-4"
                             initial={{opacity: 0, translateY: 25}}
                             whileInView={{opacity: 1, translateY: 0}}
@@ -33,11 +33,11 @@ const Experience = () => {
                 {/* UPPER */}
                 <div className="grid grid-cols-2 relative z-10">
                     {/* UPPER LEFT */}
-                    <motion.div className="p-12"
+                    <motion.div className="p-6 lg:p-12"
                                 initial={{opacity: 0, translateX: -50}}
                                 whileInView={{opacity: 1, translateX: 0}}
                                 transition={{duration: 0.5, type: easeInOut}}>
-                        <div className="relative py-4 px-8 rounded shadow-buttonShadow bg-containerColor h-56
+                        <div className="relative py-4 px-4 rounded shadow-buttonShadow bg-containerColor h-56
                                         flex flex-col justify-center hover:-translate-y-2
                                         transition-all duration-[240ms] ease-in-out group">
                             <h1 className="font-bold text-5xl mb-2">Frontend Developer</h1>

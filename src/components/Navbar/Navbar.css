@@ -3,6 +3,14 @@
     font-size: 8rem;
 }
 
+@media (max-width: 768px) {
+    .bouncing-title {
+        font-size: 3rem; /* Adjusted size for small screens */
+        text-align: center; /* Optional: center align on mobile */
+        margin-bottom: 0.8rem;
+    }
+}
+
 .bouncing-title span {
     display: inline-block;
     animation-duration: 1s;
