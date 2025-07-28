@@ -5,7 +5,7 @@ import { easeInOut, motion } from "framer-motion"
 
 const LatestWorks = () => {
     return (
-        <div className="pt-10">
+        <div className="pt-10 overflow-x-hidden">
             <div className="text-center mb-24">
                 <motion.p className="text-grayColor mb-4"
                             initial={{opacity: 0, translateY: 25}}

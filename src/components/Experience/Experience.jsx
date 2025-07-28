@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
     return (
-        <div className="pt-10 px-4 sm:px-6 lg:px-16 mt-32 lg:mt-0 mb-24 lg:mb-0">
+        <div className="pt-10 px-4 sm:px-6 lg:px-16 mt-32 lg:mt-0 mb-24 lg:mb-0 overflow-x-hidden">
             <div className="flex flex-col items-center justify-between mb-18 lg:mb-24 text-center">
-                <motion.p className="text-grayColor mb-2 text-sm sm:text-base"
+                <motion.p className="text-grayColor mb-2 text-sm"
                     initial={{ opacity: 0, translateY: 25 }}
                     whileInView={{ opacity: 1, translateY: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}>
@@ -18,10 +18,12 @@ const Experience = () => {
                 </motion.h1>
             </div>
 
-            <div className="w-full sm:w-3/4 mx-auto mb-10 relative">
+            <div className="w-full mx-auto mb-10 relative">
+
                 {/* Vertical timeline */}
                 <div className="absolute left-1/2 top-0 h-full w-[2px] bg-orangeColor transform -translate-x-1/2 z-0" />
                 <div className="absolute left-1/2 top-0 h-[2px] w-[8px] bg-orangeColor transform -translate-x-1/2 z-0" />
+                
                 <motion.div className="absolute left-1/2 top-1/4 h-[15px] w-[15px] rounded-full bg-orangeColor transform -translate-x-1/2 z-0"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}

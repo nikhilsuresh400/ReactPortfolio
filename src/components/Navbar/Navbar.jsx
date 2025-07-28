@@ -42,7 +42,7 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
 
     return (
         <div>
-            <section className="flex flex-col justify-between h-screen">
+            <section className="flex flex-col justify-between h-screen max-w-[100vw]">
                 {/* NAVBAR */}
                 <motion.nav
                     initial={{ translateY: "-100%" }}
@@ -76,7 +76,7 @@ const Navbar = ({ scrollToLatestWorks, scrollToExperience, scrollToEducation }) 
 
                 {/* MAIN SECTION */}
                 <div className="flex mt-8 lg:-mt-30">
-                    <div className="w-full max-w-screen-2xl px-[2rem] lg:px-[8rem]">
+                    <div className="w-[100vw] max-w-screen-[100vw] px-[2rem] lg:px-[8rem]">
                         <motion.p initial={{ opacity: 0, translateY: "-100%" }}
                             whileInView={{ opacity: 1, translateY: 0 }}
                             transition={{ duration: 1, type: easeInOut }}

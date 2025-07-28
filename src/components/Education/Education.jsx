@@ -3,7 +3,7 @@ import { motion, easeInOut } from "framer-motion"
 
 const Education = () => {
     return (
-        <div className="py-10 mb-24 lg:mb-0">
+        <div className="py-10 mb-24 lg:mb-0 overflow-x-hidden">
             <div className="flex flex-col items-center justify-center mb-24">
                 <motion.p className="text-grayColor mb-4"
                     initial={{ opacity: 0, translateY: 25 }}

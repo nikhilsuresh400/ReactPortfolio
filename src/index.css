@@ -44,6 +44,9 @@
 
 * {
   box-sizing: border-box;
+
+  /* DEBUG */
+  /* outline: 1px solid red; */
 }
 
 html {
@@ -55,6 +58,7 @@ body {
   background-color: var(--color-body);
   color: var(--color-dark);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 button {
