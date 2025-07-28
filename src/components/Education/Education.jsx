@@ -3,83 +3,79 @@ import { motion, easeInOut } from "framer-motion"
 
 const Education = () => {
     return (
-        <div className="pt-10">
+        <div className="py-10 mb-24 lg:mb-0">
             <div className="flex flex-col items-center justify-center mb-24">
                 <motion.p className="text-grayColor mb-4"
-                            initial={{opacity: 0, translateY: 25}}
-                            whileInView={{opacity: 1, translateY: 0}}
-                            transition={{duration: 0.5, type: easeInOut}}>ACADEMICS</motion.p>
+                    initial={{ opacity: 0, translateY: 25 }}
+                    whileInView={{ opacity: 1, translateY: 0 }}
+                    transition={{ duration: 0.5, type: easeInOut }}>ACADEMICS</motion.p>
                 <motion.h1 className="text-darkColor text-5xl font-semibold"
-                            initial={{opacity: 0, translateY: -100}}
-                            whileInView={{opacity: 1, translateY: 0}}
-                            transition={{duration: 0.5, type: easeInOut}}>Education<span className="text-orangeColor">.</span></motion.h1>
+                    initial={{ opacity: 0, translateY: -100 }}
+                    whileInView={{ opacity: 1, translateY: 0 }}
+                    transition={{ duration: 0.5, type: easeInOut }}>Education<span className="text-orangeColor">.</span></motion.h1>
             </div>
-            <div className="w-3/4 place-self-center mb-10 relative">
-            {/* VERTICAL LINE */}
-            <div className="absolute left-1/2 top-0 h-full w-[2px] bg-orangeColor transform -translate-x-1/2 z-0" />
-            
-            {/* VERTICAL LINE TEXTURE */}
-            <div className="absolute left-1/2 top-0 h-[2px] w-[8px] bg-orangeColor transform -translate-x-1/2 z-0" />
-            <motion.div className="absolute left-1/2 top-1/4 h-[15px] w-[15px] rounded-full bg-orangeColor transform -translate-x-1/2 z-0" 
-                                    initial={{scale: 0}}
-                                    whileInView={{scale: 1}}
-                                    transition={{duration: 0.5, type: easeInOut}}/>
-            <motion.div className="absolute left-1/2 top-3/4 h-[15px] w-[15px] rounded-full bg-orangeColor transform -translate-x-1/2 z-0" 
-                                    initial={{scale: 0}}
-                                    whileInView={{scale: 1}}
-                                    transition={{duration: 0.5, type: easeInOut}}/>
-            <div className="absolute left-1/2 bottom-0 h-[2px] w-[8px] bg-orangeColor transform -translate-x-1/2 z-0" />
-                
+            <div className="w-full sm:w-3/4 mx-auto mb-10 relative">
+                {/* Vertical timeline */}
+                <div className="absolute left-1/2 top-0 h-full w-[2px] bg-orangeColor transform -translate-x-1/2 z-0" />
+                <div className="absolute left-1/2 top-0 h-[2px] w-[8px] bg-orangeColor transform -translate-x-1/2 z-0" />
+                <motion.div className="absolute left-1/2 top-1/4 h-[15px] w-[15px] rounded-full bg-orangeColor transform -translate-x-1/2 z-0"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }} />
+                <motion.div className="absolute left-1/2 top-3/4 h-[15px] w-[15px] rounded-full bg-orangeColor transform -translate-x-1/2 z-0"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }} />
+                <div className="absolute left-1/2 bottom-0 h-[2px] w-[8px] bg-orangeColor transform -translate-x-1/2 z-0" />
+
                 {/* UPPER */}
-                <div className="grid grid-cols-2 relative z-10">
-                    {/* UPPER LEFT */}
-                    <motion.div className="p-12"
-                                initial={{opacity: 0, translateX: -50}}
-                                whileInView={{opacity: 1, translateX: 0}}
-                                transition={{duration: 0.5, type: easeInOut}}>
-                        <div className="relative group py-4 px-8 rounded shadow-buttonShadow bg-containerColor h-56
+                <div className="grid grid-cols-1 sm:grid-cols-2 relative z-10 mb-8">
+                    {/* LEFT */}
+                    <motion.div className="p-4 sm:p-6 lg:p-12"
+                        initial={{ opacity: 0, translateX: -50 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}>
+                        <div className="relative py-4 px-6 lg:px-8 rounded shadow-buttonShadow bg-containerColor h-48 sm:h-56
                                         flex flex-col justify-center hover:-translate-y-2
-                                        transition-all duration-[240ms] ease-in-out">
-                            <h1 className="font-bold text-5xl mb-2">Computer Science Engineering(B.E.)</h1>
-                            <p className="text-grayColor text-lg mb-1">Nehru Institute of Technology, Coimbatore, TN</p>
-                            <p className="font-semibold text-blueColor">&bull; GPA - 7.6</p>
-                            {/* CARD SIDE GRAPHIC */}
-                            <span className="absolute bottom-18 right-4 text-blueColor
-                                            group-hover:-translate-y-3
-                                            transition-all delay-150 duration-[240ms] ease-in-out">01</span>
-                            <div className="absolute right-5 bottom-5 h-1/5 w-[2px] bg-grayColor transform -translate-x-1/2
+                                        transition-all duration-[240ms] ease-in-out group">
+                            <h1 className="font-bold text-3xl lg:text-4xl mb-3 lg:mb-2">Frontend Developer</h1>
+                            <p className="text-grayColor text-sm sm:text-base mb-2 lg:mb-1">Fenopix Technologies Pvt. Ltd. - Bengaluru, KA</p>
+                            <p className="font-semibold text-blueColor text-sm sm:text-base">&bull; GPA - 7.6</p>
+                            <span className="absolute bottom-14 lg:bottom-15 right-4 text-blueColor
+                                            group-hover:-translate-y-6
+                                            transition-all delay-80 duration-[240ms] ease-in-out text-sm sm:text-base">01</span>
+                            <div className="absolute right-5 bottom-5 h-1/6 w-[2px] bg-grayColor transform -translate-x-1/2
                                             group-hover:h-1/4
                                             transition-all duration-[240ms] ease-in-out" />
                         </div>
                     </motion.div>
-                    {/* UPPER RIGHT */}
-                    <div className="p-12 flex flex-col justify-center">
-                        <p className="place-self-start text-grayColor">2016-2020</p>
+                    {/* RIGHT */}
+                    <div className="p-4 sm:p-6 lg:p-12 flex items-center justify-start lg:justify-center sm:justify-start text-center sm:text-left">
+                        <p className="text-grayColor text-sm sm:text-base">Jun. 2023 - Present</p>
                     </div>
                 </div>
 
                 {/* LOWER */}
-                <div className="grid grid-cols-2 relative z-10">
-                    {/* LOWER LEFT */}
-                    <div className="p-12 flex flex-col justify-center">
-                        <p className="place-self-end text-grayColor">2012-2016</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 relative z-10">
+                    {/* LEFT */}
+                    <div className="p-4 sm:p-6 lg:p-12 flex items-center justify-end lg:justify-center sm:justify-end text-center sm:text-right">
+                        <p className="text-grayColor text-sm sm:text-base">Nov. 2022 - Jun. 2023</p>
                     </div>
-                    {/* LOWER RIGHT */}
-                    <motion.div className="p-12"
-                                initial={{opacity: 0, translateX: 50}}
-                                whileInView={{opacity: 1, translateX: 0}}
-                                transition={{duration: 0.5, type: easeInOut}}>
-                        <div className="relative group py-4 px-8 rounded shadow-buttonShadow bg-containerColor h-56
+                    {/* RIGHT */}
+                    <motion.div className="p-4 sm:p-6 lg:p-12"
+                        initial={{ opacity: 0, translateX: 50 }}
+                        whileInView={{ opacity: 1, translateX: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}>
+                        <div className="relative py-4 px-6 lg:px-8 rounded shadow-buttonShadow bg-containerColor h-48 sm:h-56
                                         flex flex-col justify-center hover:-translate-y-2
-                                        transition-all duration-[240ms] ease-in-out">
-                            <h1 className="font-bold text-5xl mb-2">High School</h1>
-                            <p className="text-grayColor text-lg mb-1">Adarsh Vidyalaya Higher Secondary School, Raipur, CG</p>
-                            <p className="font-semibold text-blueColor">&bull; 12th Grade - 82%</p>
-                            {/* CARD SIDE GRAPHIC */}
-                            <span className="absolute bottom-18 right-4 text-blueColor
-                                            group-hover:-translate-y-3
-                                            transition-all delay-150 duration-[240ms] ease-in-out">02</span>
-                            <div className="absolute right-5 bottom-5 h-1/5 w-[2px] bg-grayColor transform -translate-x-1/2
+                                        transition-all duration-[240ms] ease-in-out group">
+                            <h1 className="font-bold text-3xl lg:text-4xl mb-3 lg:mb-2">Operations Executive</h1>
+                            <p className="text-grayColor text-sm sm:text-base mb-2 lg:mb-1">Teleperformance Global India Pvt. Ltd. - Bengaluru, KA</p>
+                            <p className="font-semibold text-blueColor text-sm sm:text-base">&bull; 12th Grade - 82%</p>
+                            <span className="absolute bottom-14 lg:bottom-15 right-4 text-blueColor
+                                            group-hover:-translate-y-6
+                                            transition-all delay-80 duration-[240ms] ease-in-out text-sm sm:text-base">02</span>
+                            <div className="absolute right-5 bottom-5 h-1/6 w-[2px] bg-grayColor transform -translate-x-1/2
                                             group-hover:h-1/4
                                             transition-all duration-[240ms] ease-in-out" />
                         </div>

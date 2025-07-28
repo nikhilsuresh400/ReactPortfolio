@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
     return (
-        <div className="pt-10 px-4 sm:px-6 lg:px-16">
+        <div className="pt-10 px-4 sm:px-6 lg:px-16 mt-32 lg:mt-0 mb-24 lg:mb-0">
             <div className="flex flex-col items-center justify-between mb-18 lg:mb-24 text-center">
                 <motion.p className="text-grayColor mb-2 text-sm sm:text-base"
                     initial={{ opacity: 0, translateY: 25 }}
@@ -42,7 +42,7 @@ const Experience = () => {
                         <div className="relative py-4 px-6 lg:px-8 rounded shadow-buttonShadow bg-containerColor h-48 sm:h-56
                                         flex flex-col justify-center hover:-translate-y-2
                                         transition-all duration-[240ms] ease-in-out group">
-                            <h1 className="font-bold text-2xl lg:text-4xl mb-3 lg:mb-2">Frontend Developer</h1>
+                            <h1 className="font-bold text-3xl lg:text-4xl mb-3 lg:mb-2">Frontend Developer</h1>
                             <p className="text-grayColor text-sm sm:text-base mb-2 lg:mb-1">Fenopix Technologies Pvt. Ltd. - Bengaluru, KA</p>
                             <p className="font-semibold text-blueColor text-sm sm:text-base">&bull; GPA - 7.6</p>
                             <span className="absolute bottom-14 lg:bottom-15 right-4 text-blueColor
@@ -73,7 +73,7 @@ const Experience = () => {
                         <div className="relative py-4 px-6 lg:px-8 rounded shadow-buttonShadow bg-containerColor h-48 sm:h-56
                                         flex flex-col justify-center hover:-translate-y-2
                                         transition-all duration-[240ms] ease-in-out group">
-                            <h1 className="font-bold text-2xl lg:text-4xl mb-3 lg:mb-2">Operations Executive</h1>
+                            <h1 className="font-bold text-3xl lg:text-4xl mb-3 lg:mb-2">Operations Executive</h1>
                             <p className="text-grayColor text-sm sm:text-base mb-2 lg:mb-1">Teleperformance Global India Pvt. Ltd. - Bengaluru, KA</p>
                             <p className="font-semibold text-blueColor text-sm sm:text-base">&bull; 12th Grade - 82%</p>
                             <span className="absolute bottom-14 lg:bottom-15 right-4 text-blueColor

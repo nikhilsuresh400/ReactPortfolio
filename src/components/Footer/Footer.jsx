@@ -6,7 +6,7 @@ const Footer = () => {
                         flex flex-col justify-center items-center">
             <footer className="flex flex-col items-center justify-center">
                 <div className="mb-6">
-                    <h1 className="text-6xl font-semibold font-cursiveFont">Ni <span className="text-orangeColor">.</span></h1>
+                    <h1 className="text-5xl lg:text-6xl font-semibold font-cursiveFont">Ni <span className="text-orangeColor">.</span></h1>
                 </div>
                 <div className="flex items-center gap-16 font-semibold mb-8">
                     <div><a href="https://www.linkedin.com/in/nikhil-suresh-06207a360/" target="_blank" noopener noreferrer>Linkedin</a></div>
